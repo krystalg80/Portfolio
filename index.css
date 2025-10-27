@@ -567,6 +567,7 @@
   }
 } .u-section-4 {
   background-image: none;
+  padding-bottom: 80px;
 }
 
 .u-section-4 .u-sheet-1 {
@@ -583,12 +584,12 @@
 }
 
 .u-section-4 .u-list-1 {
-  width: 731px;
+  width: 915px;
   margin: 27px auto 0;
 }
 
 .u-section-4 .u-repeater-1 {
-  grid-template-columns: repeat(4, calc(25% - 15px));
+  grid-template-columns: repeat(5, calc(20% - 16px));
   min-height: 133px;
   grid-gap: 20px;
 }
@@ -706,12 +707,12 @@
 }
 
 .u-section-4 .u-list-2 {
-  width: 731px;
+  width: 915px;
   margin: 23px auto 0;
 }
 
 .u-section-4 .u-repeater-2 {
-  grid-template-columns: repeat(4, calc(25% - 15px));
+  grid-template-columns: repeat(5, calc(20% - 16px));
   min-height: 133px;
   grid-gap: 20px;
 }
