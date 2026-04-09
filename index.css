@@ -2585,7 +2585,7 @@
   flex-direction: column;
   flex-grow: 1;
   background: linear-gradient(135deg, #7A9E87 0%, #5C8A6F 100%);
-  min-height: 340px;
+  min-height: 380px;
   justify-content: space-between;
 }
 
@@ -2663,8 +2663,8 @@
 .project-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 15px;
+  gap: 6px;
+  margin-bottom: 12px;
 }
 
 .tech-tag {
