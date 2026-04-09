@@ -2678,22 +2678,23 @@
 }
 
 .hover-hint {
-  font-size: 0.9em;
-  opacity: 0.9;
+  font-size: 0.85em;
+  font-weight: 600;
   margin-top: auto;
-  padding-top: 10px;
+  padding: 8px 14px;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  display: inline-block;
+  align-self: flex-start;
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0%, 100% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 0.85; }
+  50%       { opacity: 1;    }
 }
 
 .project-back h4 {
