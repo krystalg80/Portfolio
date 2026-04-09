@@ -30,7 +30,18 @@
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body data-home-page="Portfolio.html" data-home-page-title="Portfolio" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-9b53"><div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
+  <body data-home-page="Portfolio.html" data-home-page-title="Portfolio" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
+
+  <!-- Boot Screen -->
+  <div id="boot-screen">
+    <div id="boot-text"></div>
+    <div id="boot-cursor">▋</div>
+  </div>
+
+  <!-- Floating Leaves -->
+  <div id="leaves-container" aria-hidden="true"></div>
+
+  <header class="u-clearfix u-header u-header" id="sec-9b53"><div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
@@ -604,58 +615,98 @@
       </div>
     </section>
 
-    <section class="u-clearfix u-palette-1-light-3 u-section-work" id="carousel-work-exp" style="padding: 60px 0;">
-      <div class="u-clearfix u-sheet u-sheet-1" style="max-width: 1200px; margin: 0 auto;">
-        <h2 class="u-align-center u-text u-text-default u-text-1">Work Experience</h2>
-        
-        <div style="margin: 30px 0; padding: 20px; background: white; border-radius: 8px;">
-          <h3 style="font-weight: bold; margin-bottom: 10px;">TheWhyMan | Full Stack Software Developer | Remote</h3>
-          <p style="color: #666; margin-bottom: 15px;">June 2025 - Current</p>
-          <ul style="line-height: 1.8;">
-            <li>Developing Resilience AI, a human-powered, AI-first coaching platform designed to improve holistic wellness through AI-backed and celebrity-supported coaches</li>
-            <li>Architecting and integrating Firebase authentication, real-time database features, and secure cloud functions to enable scalable user interactions</li>
-            <li>Building Python-based backend services for AI-powered coach matching, behavioral progress tracking, and wellness data analytics</li>
-            <li>Implementing and refining goal-tracking visualizations (interactive progress rings) to boost engagement and user retention</li>
-            <li>Enhancing UI/UX with responsive design improvements, CSS optimizations, and intuitive user workflows</li>
-          </ul>
-        </div>
+    <section class="u-clearfix u-palette-1-light-3 u-section-work" id="carousel-work-exp" style="padding: 80px 20px;">
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <p style="text-align:center; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; color: #7A9E87; margin-bottom: 10px;">Where I've Worked</p>
+        <h2 class="u-align-center u-text u-text-default u-text-1" style="margin-bottom: 60px;">Experience</h2>
 
-        <div style="margin: 30px 0; padding: 20px; background: white; border-radius: 8px;">
-          <h3 style="font-weight: bold; margin-bottom: 10px;">LVC SOLUTIONS LLC | Founding Software Engineer | Remote</h3>
-          <p style="color: #666; margin-bottom: 15px;">Apr 2025 - Current</p>
-          <ul style="line-height: 1.8;">
-            <li>Leading the development of scalable web applications using Next.js, TypeScript, and Firebase</li>
-            <li>Managing front-end and back-end engineers, assigning tasks, and ensuring smooth development workflows</li>
-            <li>Designing and optimizing cloud deployments in AWS and Azure environments</li>
-            <li>Developing AI-powered features, including chatbots and recommendation systems, using GPT-4 and machine learning tools</li>
-            <li>Collaborating with UI/UX designers to create dynamic and accessible user experiences</li>
-          </ul>
-        </div>
+        <div class="timeline">
 
-        <div style="margin: 30px 0; padding: 20px; background: white; border-radius: 8px;">
-          <h3 style="font-weight: bold; margin-bottom: 10px;">Stealth AI Startup | Software Engineer | Remote</h3>
-          <p style="color: #666; margin-bottom: 15px;">Mar 2025 - May 2025</p>
-          <ul style="line-height: 1.8;">
-            <li>Built and deployed multi-modal AI technology with multi-micro service APIs integrated into React Native frontend and Flask backend</li>
-            <li>Architected scalable microservice APIs that seamlessly integrate frontend and backend AI capabilities</li>
-            <li>Solved complex 3D integration challenges including hyper-realistic 3D model compatibility with Mixamo for 3D Avatar systems</li>
-            <li>Engineered motion tracking and user prompt systems for interactive 3D avatar experiences</li>
-            <li>Collaborated on investor demo preparation and presentation of cutting-edge AI-powered solutions</li>
-          </ul>
-        </div>
+          <!-- Item 1: TheWhyMan (right) -->
+          <div class="timeline-item">
+            <div class="timeline-dot">TW</div>
+            <div class="timeline-card">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; margin-bottom:6px;">
+                <h3 style="font-weight:700; font-size:1.05rem; margin:0;">Full Stack Software Developer</h3>
+                <span class="tl-date">June 2025 – Present</span>
+              </div>
+              <p style="color:#7A9E87; font-weight:600; margin:0 0 14px;">TheWhyMan · Remote</p>
+              <div class="tl-tags">
+                <span class="tl-tag">Angular</span><span class="tl-tag">Firebase</span><span class="tl-tag">Python</span><span class="tl-tag">React Native</span><span class="tl-tag">PWA</span>
+              </div>
+              <ul class="tl-list">
+                <li>Developing Resilience AI, an AI-first wellness coaching platform with celebrity-supported coaches</li>
+                <li>Architecting Firebase auth, real-time database features, and secure cloud functions</li>
+                <li>Building Python backend services for AI-powered coach matching and behavioral analytics</li>
+                <li>Implementing interactive goal-tracking progress rings to boost engagement and retention</li>
+              </ul>
+            </div>
+          </div>
 
-        <div style="margin: 30px 0; padding: 20px; background: white; border-radius: 8px;">
-          <h3 style="font-weight: bold; margin-bottom: 10px;">Clarity | Founder & CEO & Full Stack Engineer</h3>
-          <p style="color: #666; margin-bottom: 15px;">Jan 2025 - Current</p>
-          <ul style="line-height: 1.8;">
-            <li>Founded and currently leading product, design, and engineering of the platform</li>
-            <li>Shaped product vision, technical roadmap, and growth strategy from the ground up</li>
-            <li>Led development of secure authentication system and scalable API architecture</li>
-            <li>Coordinated user feedback and applied iterative design to boost engagement by 40%</li>
-            <li>Managing end-to-end development and launch of MVP</li>
-          </ul>
-        </div>
+          <!-- Item 2: LVC Solutions (left) -->
+          <div class="timeline-item timeline-item-left">
+            <div class="timeline-dot">LVC</div>
+            <div class="timeline-card">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; margin-bottom:6px;">
+                <h3 style="font-weight:700; font-size:1.05rem; margin:0;">Founding Software Engineer</h3>
+                <span class="tl-date">Apr 2025 – Present</span>
+              </div>
+              <p style="color:#7A9E87; font-weight:600; margin:0 0 14px;">LVC Solutions LLC · Remote</p>
+              <div class="tl-tags">
+                <span class="tl-tag">Next.js</span><span class="tl-tag">TypeScript</span><span class="tl-tag">Firebase</span><span class="tl-tag">AWS</span><span class="tl-tag">GPT-4</span>
+              </div>
+              <ul class="tl-list">
+                <li>Leading development of scalable web apps using Next.js, TypeScript, and Firebase</li>
+                <li>Managing front-end and back-end engineers across the full development workflow</li>
+                <li>Designing and optimizing cloud deployments across AWS and Azure environments</li>
+                <li>Building AI-powered features including chatbots and recommendation systems</li>
+              </ul>
+            </div>
+          </div>
 
+          <!-- Item 3: Stealth AI (right) -->
+          <div class="timeline-item">
+            <div class="timeline-dot">AI</div>
+            <div class="timeline-card">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; margin-bottom:6px;">
+                <h3 style="font-weight:700; font-size:1.05rem; margin:0;">Software Engineer</h3>
+                <span class="tl-date">Mar 2025 – May 2025</span>
+              </div>
+              <p style="color:#7A9E87; font-weight:600; margin:0 0 14px;">Stealth AI Startup · Remote</p>
+              <div class="tl-tags">
+                <span class="tl-tag">React Native</span><span class="tl-tag">Flask</span><span class="tl-tag">Python</span><span class="tl-tag">WebGL</span><span class="tl-tag">Microservices</span>
+              </div>
+              <ul class="tl-list">
+                <li>Built multi-modal AI tech integrating microservice APIs into a React Native + Flask stack</li>
+                <li>Solved 3D integration challenges including hyper-realistic avatar compatibility with Mixamo</li>
+                <li>Engineered motion tracking and user prompt systems for interactive 3D avatar experiences</li>
+                <li>Collaborated on investor demo preparation for cutting-edge AI-powered solutions</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 4: Clarity (left) -->
+          <div class="timeline-item timeline-item-left">
+            <div class="timeline-dot">C</div>
+            <div class="timeline-card">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; margin-bottom:6px;">
+                <h3 style="font-weight:700; font-size:1.05rem; margin:0;">Founder & CEO & Full Stack Engineer</h3>
+                <span class="tl-date">Jan 2025 – Present</span>
+              </div>
+              <p style="color:#7A9E87; font-weight:600; margin:0 0 14px;">Clarity · Remote</p>
+              <div class="tl-tags">
+                <span class="tl-tag">React</span><span class="tl-tag">Firebase</span><span class="tl-tag">Stripe</span><span class="tl-tag">PWA</span><span class="tl-tag">Google Cloud NLP</span>
+              </div>
+              <ul class="tl-list">
+                <li>Founded and leading product, design, and engineering of a mental wellness platform</li>
+                <li>Shaped product vision, technical roadmap, and growth strategy from the ground up</li>
+                <li>Built secure authentication, scalable API architecture, and Stripe subscription system</li>
+                <li>Applied iterative design from user feedback to boost engagement by 40%</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -735,6 +786,60 @@
     
     
     
+  <script>
+    // ── Boot Screen ──────────────────────────────────────────────
+    const bootLines = [
+      '> Initializing portfolio...',
+      '> Loading Krystal Galdamez.exe',
+      '> Skills: React · Node · TypeScript · AI  ✓',
+      '> Projects: Fair Job · Clarity · CodeWhisper  ✓',
+      '> Status: Open to Work  🟢',
+      '> Welcome.'
+    ];
+    let li = 0, ci = 0;
+    const bootEl = document.getElementById('boot-text');
+    const bootScreen = document.getElementById('boot-screen');
+    function typeChar() {
+      if (li >= bootLines.length) {
+        document.getElementById('boot-cursor').style.display = 'none';
+        setTimeout(() => {
+          bootScreen.style.opacity = '0';
+          setTimeout(() => bootScreen.style.display = 'none', 700);
+        }, 500);
+        return;
+      }
+      const line = bootLines[li];
+      if (ci < line.length) {
+        bootEl.innerHTML += line[ci++];
+        setTimeout(typeChar, 30);
+      } else {
+        bootEl.innerHTML += '<br>';
+        li++; ci = 0;
+        setTimeout(typeChar, 180);
+      }
+    }
+    setTimeout(typeChar, 300);
+
+    // ── Floating Leaves ──────────────────────────────────────────
+    const container = document.getElementById('leaves-container');
+    const leafColors = ['#7A9E87','#9ABFAC','#5C8A6F','#C5DDD3'];
+    for (let i = 0; i < 14; i++) {
+      const leaf = document.createElement('div');
+      leaf.classList.add('leaf');
+      const size = 10 + Math.random() * 14;
+      leaf.style.cssText = `
+        left: ${Math.random() * 100}vw;
+        width: ${size}px;
+        height: ${size}px;
+        background: ${leafColors[Math.floor(Math.random() * leafColors.length)]};
+        animation-duration: ${10 + Math.random() * 14}s;
+        animation-delay: ${Math.random() * 20}s;
+        opacity: 0;
+      `;
+      container.appendChild(leaf);
+    }
+  </script>
+
     <footer class="u-align-center u-clearfix u-container-align-center u-footer u-grey-80 u-footer" id="sec-b199"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">© 2026 Krystal Galdamez · Built with purpose · Silicon Valley, CA</p>
       </div></footer>
