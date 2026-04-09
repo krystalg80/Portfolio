@@ -2555,7 +2555,7 @@
   width: 100%;
   height: 180px;
   overflow: hidden;
-  background: linear-gradient(135deg, #568ac4 0%, #3a6fa0 100%);
+  background: linear-gradient(135deg, #7A9E87 0%, #5C8A6F 100%);
   flex-shrink: 0;
 }
 
@@ -2572,7 +2572,7 @@
 
 /* Fallback styling if image is missing */
 .project-image-header img[alt]:not([src*=".jpg"]):not([src*=".png"]):not([src*=".jpeg"]) {
-  background: linear-gradient(135deg, #568ac4 20%, #3a6fa0 80%);
+  background: linear-gradient(135deg, #7A9E87 20%, #5C8A6F 80%);
 }
 
 .project-card:hover .project-image-header img {
@@ -2584,7 +2584,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  background: linear-gradient(135deg, #568ac4 0%, #3a6fa0 100%);
+  background: linear-gradient(135deg, #7A9E87 0%, #5C8A6F 100%);
   min-height: 340px;
   justify-content: space-between;
 }
@@ -2594,7 +2594,7 @@
   color: #333;
   transform: rotateY(180deg);
   overflow-y: auto;
-  border: 2px solid #568ac4;
+  border: 2px solid #7A9E87;
 }
 
 .project-badge {
@@ -2610,7 +2610,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #568ac4;
+  color: #7A9E87;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   z-index: 10;
   animation: badgePulse 2s ease-in-out infinite;
@@ -2697,11 +2697,11 @@
 }
 
 .project-back h4 {
-  color: #568ac4;
+  color: #7A9E87;
   font-size: 1.2em;
   margin: 0 0 20px 0;
   font-weight: 700;
-  border-bottom: 2px solid #568ac4;
+  border-bottom: 2px solid #7A9E87;
   padding-bottom: 10px;
 }
 
@@ -2723,7 +2723,7 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: #568ac4;
+  color: #7A9E87;
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -2737,7 +2737,7 @@
 .project-btn {
   flex: 1;
   padding: 12px 20px;
-  background: linear-gradient(135deg, #568ac4 0%, #3a6fa0 100%);
+  background: linear-gradient(135deg, #7A9E87 0%, #5C8A6F 100%);
   color: white !important;
   text-decoration: none;
   border-radius: 10px;
@@ -2973,7 +2973,7 @@
 
 .contact-text strong {
   font-size: 0.85em;
-  color: #568ac4;
+  color: #7A9E87;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -2989,7 +2989,7 @@
 }
 
 .contact-text a:hover {
-  color: #568ac4;
+  color: #7A9E87;
   padding-left: 5px;
 }
 
