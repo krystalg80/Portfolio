@@ -117,6 +117,11 @@
 
 .u-section-1 .u-layout-cell-2 {
   min-height: 643px;
+  background: transparent !important;
+}
+
+.u-section-1 .u-layout-cell-1 {
+  background: transparent !important;
 }
 
 .u-section-1 .u-container-layout-2 {
