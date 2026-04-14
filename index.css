@@ -29,7 +29,7 @@
 
 .u-section-1 .u-layout-wrap-1 {
   width: 1140px;
-  margin: -472px auto 0;
+  margin: 0 auto;
 }
 
 .u-section-1 .u-layout-cell-1 {
@@ -42,7 +42,7 @@
 }
 
 .u-section-1 .u-container-layout-1 {
-  padding: 90px 20px 20px 0;
+  padding: 60px 40px 60px 60px;
 }
 
 .u-section-1 .u-text-1 {
@@ -79,13 +79,15 @@
   box-shadow: 0 8px 28px rgba(0,0,0,0.3);
 }
 
-/* Social icons — use white instead of palette green */
+/* Social icons — white on dark */
 .u-section-1 .u-social-icon {
-  color: rgba(255,255,255,0.7) !important;
+  color: rgba(255,255,255,0.6) !important;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .u-section-1 .u-social-icon:hover {
   color: #ffffff !important;
+  transform: translateY(-2px);
 }
 
 /* Headshot — green glow ring */
