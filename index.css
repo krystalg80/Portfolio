@@ -2989,12 +2989,11 @@
 }
 
 .contact-link-value {
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-weight: 600;
   color: #333;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-break: break-word;
+  line-height: 1.3;
 }
 
 .contact-cta-row {
