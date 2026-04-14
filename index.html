@@ -32,11 +32,7 @@
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-home-page="Portfolio.html" data-home-page-title="Portfolio" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
 
-  <!-- Boot Screen -->
-  <div id="boot-screen">
-    <div id="boot-text"></div>
-    <div id="boot-cursor">▋</div>
-  </div>
+  <!-- Boot Screen injected by JS outside <body> to avoid stacking context issues -->
 
   <!-- Floating Leaves -->
   <div id="leaves-container" aria-hidden="true"></div>
@@ -692,6 +688,37 @@
     
   <script>
     // ── Boot Screen ──────────────────────────────────────────────
+    // Build the overlay in JS and attach to <html> (not <body>) so no
+    // body-level transform, will-change, or stacking context can affect it.
+    const bootScreen = document.createElement('div');
+    bootScreen.id = 'boot-screen';
+    bootScreen.setAttribute('style', [
+      'position:fixed',
+      'top:0',
+      'left:0',
+      'width:100vw',
+      'height:100vh',
+      'background:#0f0f0f',
+      'z-index:2147483647',
+      'display:flex',
+      'flex-direction:column',
+      'align-items:center',
+      'justify-content:center',
+      'margin:0',
+      'padding:0',
+      'border:none',
+      'box-sizing:border-box',
+      'transition:opacity 0.7s ease'
+    ].join(';'));
+    const bootEl = document.createElement('div');
+    bootEl.id = 'boot-text';
+    const bootCursor = document.createElement('div');
+    bootCursor.id = 'boot-cursor';
+    bootCursor.textContent = '▋';
+    bootScreen.appendChild(bootEl);
+    bootScreen.appendChild(bootCursor);
+    document.documentElement.appendChild(bootScreen);
+
     const bootLines = [
       '> Initializing portfolio...',
       '> Loading Krystal Galdamez.exe',
@@ -701,14 +728,12 @@
       '> Welcome.'
     ];
     let li = 0, ci = 0;
-    const bootEl = document.getElementById('boot-text');
-    const bootScreen = document.getElementById('boot-screen');
     function typeChar() {
       if (li >= bootLines.length) {
-        document.getElementById('boot-cursor').style.display = 'none';
+        bootCursor.style.display = 'none';
         setTimeout(() => {
           bootScreen.style.opacity = '0';
-          setTimeout(() => bootScreen.style.display = 'none', 700);
+          setTimeout(() => bootScreen.remove(), 700);
         }, 500);
         return;
       }
