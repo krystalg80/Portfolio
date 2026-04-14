@@ -2909,206 +2909,170 @@
 }
 
 .contact-info-section {
-  padding: 35px 40px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 16px;
+  padding: 40px 48px;
+  background: #ffffff;
+  border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(86, 138, 196, 0.1);
   margin: 0;
 }
 
+.contact-eyebrow {
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #7A9E87;
+  margin-bottom: 12px;
+}
+
+.contact-heading {
+  font-size: 2em;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.25;
+  margin: 0 0 16px 0;
+}
+
 .contact-description {
-  font-size: 1.15em;
-  line-height: 1.7;
-  color: #444;
-  margin-bottom: 35px;
+  font-size: 1.05em;
+  line-height: 1.75;
+  color: #666;
+  margin-bottom: 32px;
   font-weight: 400;
 }
 
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-bottom: 35px;
+.contact-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 32px;
 }
 
-.contact-item {
+.contact-link-card {
   display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 20px 25px;
-  background: white;
-  border-radius: 15px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid transparent;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  gap: 14px;
+  padding: 16px 18px;
+  background: #f8faf9;
+  border: 1.5px solid #e2ece7;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  color: inherit;
 }
 
-.contact-item:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(86, 138, 196, 0.15);
-  border-color: rgba(86, 138, 196, 0.3);
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+.contact-link-card:hover:not(.no-hover) {
+  background: #fff;
+  border-color: #7A9E87;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(122, 158, 135, 0.15);
 }
 
-.contact-icon {
-  font-size: 2em;
+.contact-link-card.no-hover {
+  cursor: default;
+}
+
+.contact-link-icon {
+  font-size: 1.5em;
   line-height: 1;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  min-width: 40px;
-  text-align: center;
+  flex-shrink: 0;
 }
 
-.contact-text {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex: 1;
-}
-
-.contact-text strong {
-  font-size: 0.85em;
-  color: #7A9E87;
-  text-transform: uppercase;
+.contact-link-label {
+  font-size: 0.75em;
+  font-weight: 700;
   letter-spacing: 1px;
-  font-weight: 700;
-}
-
-.contact-text a {
-  color: #333;
-  text-decoration: none;
-  font-size: 1.1em;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.contact-text a:hover {
-  color: #7A9E87;
-  padding-left: 5px;
-}
-
-.contact-text span {
-  color: #555;
-  font-size: 1.1em;
-  font-weight: 500;
-}
-
-.email-btn {
-  display: inline-block;
-  font-weight: 700;
   text-transform: uppercase;
-  font-size: 1.05rem;
-  letter-spacing: 1.5px;
-  padding: 20px 50px;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 15px;
-  box-shadow: 0 6px 20px rgba(86, 138, 196, 0.3);
-  position: relative;
+  color: #7A9E87;
+  margin-bottom: 2px;
+}
+
+.contact-link-value {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.email-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.5s ease;
+.contact-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.email-btn:hover::before {
-  left: 100%;
+.contact-cta-btn {
+  display: inline-block;
+  background: #7A9E87;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(122, 158, 135, 0.35);
 }
 
-.email-btn:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 12px 35px rgba(86, 138, 196, 0.4);
+.contact-cta-btn:hover {
+  background: #5c8a6f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(122, 158, 135, 0.45);
+  color: #fff;
 }
 
-.email-btn:active {
-  transform: translateY(-2px) scale(1.03);
+.contact-available-badge {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #3d7a5a;
+  background: #eaf5ef;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1.5px solid #b4d9c4;
 }
 
 @media (max-width: 991px) {
-  .u-section-6 .u-text-1 {
-    font-size: 2em !important;
-  }
-  
   .u-container-layout-2 {
     padding: 30px !important;
   }
-  
   .contact-info-section {
     padding: 30px;
   }
 }
 
 @media (max-width: 767px) {
-  .u-section-6 .u-text-1 {
-    font-size: 1.75em !important;
-    margin-bottom: 20px !important;
-  }
-  
   .u-container-layout-2 {
     padding: 20px !important;
   }
-  
   .contact-info-section {
     padding: 25px 20px;
   }
-  
-  .contact-description {
-    font-size: 1em;
-    margin-bottom: 25px;
+  .contact-links {
+    grid-template-columns: 1fr;
   }
-  
-  .contact-item {
-    padding: 15px 18px;
-    gap: 15px;
-  }
-  
-  .contact-icon {
+  .contact-heading {
     font-size: 1.6em;
-    min-width: 35px;
   }
-  
-  .contact-text a,
-  .contact-text span {
-    font-size: 1em;
+  .contact-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .email-btn {
+  .contact-cta-btn {
     width: 100%;
     text-align: center;
-    padding: 18px 30px;
-    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 575px) {
   .contact-info-section {
-    padding: 20px 15px;
+    padding: 20px 16px;
   }
-  
-  .contact-details {
-    gap: 15px;
-  }
-  
-  .contact-item {
-    padding: 12px 15px;
-  }
-  
-  .contact-text a {
-    word-break: break-word;
-  }
-  
-  .email-btn {
-    padding: 16px 25px;
-    font-size: 0.9rem;
+  .contact-link-value {
+    font-size: 0.82em;
   }
 }
 /* ── Boot Screen ─────────────────────────────────────────── */
