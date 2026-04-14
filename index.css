@@ -1,9 +1,27 @@
- .u-section-1 {
+/* ── Dark Hero ───────────────────────────────────────────── */
+.u-section-1 {
+  background: linear-gradient(135deg, #1a2e22 0%, #243d2c 50%, #1e3528 100%) !important;
   background-image: none;
   min-height: 697px;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Subtle radial glow behind the text */
+.u-section-1::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  width: 60%;
+  height: 120%;
+  background: radial-gradient(ellipse at center, rgba(122, 158, 135, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Hide the white nicepage shape */
 .u-section-1 .u-shape-1 {
+  display: none;
   height: 526px;
   margin-top: 0;
   margin-bottom: 0;
@@ -30,14 +48,17 @@
 .u-section-1 .u-text-1 {
   font-size: 6rem;
   margin: 0;
+  color: #ffffff !important;
 }
 
 .u-section-1 .u-text-2 {
   font-weight: 700;
   font-size: 2.25rem;
   margin: 0;
+  color: #9ABFAC !important;
 }
 
+/* Hire Me button — white on dark */
 .u-section-1 .u-btn-1 {
   --radius: 50px;
   font-weight: 700;
@@ -46,6 +67,30 @@
   letter-spacing: 1px;
   margin: 39px auto 0 0;
   padding: 17px 42px 19px 41px;
+  background: #ffffff !important;
+  color: #1a2e22 !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: all 0.25s ease;
+}
+
+.u-section-1 .u-btn-1:hover {
+  background: #f0f8f4 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+}
+
+/* Social icons — use white instead of palette green */
+.u-section-1 .u-social-icon {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+.u-section-1 .u-social-icon:hover {
+  color: #ffffff !important;
+}
+
+/* Headshot — green glow ring */
+.u-section-1 .u-image-1 {
+  box-shadow: 0 0 0 6px rgba(122, 158, 135, 0.35), 0 20px 60px rgba(0,0,0,0.4) !important;
 }
 
 .u-section-1 .u-icon-1 {
