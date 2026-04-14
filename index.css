@@ -2729,6 +2729,30 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.project-front-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.project-front-btn {
+  font-size: 0.78em;
+  font-weight: 700;
+  color: #7A9E87;
+  border: 1.5px solid #7A9E87;
+  border-radius: 20px;
+  padding: 5px 14px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.project-front-btn:hover {
+  background: #7A9E87;
+  color: #fff;
+}
+
 .hover-hint {
   font-size: 0.9em;
   margin-top: auto;
