@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* ── Dark Hero ───────────────────────────────────────────── */
 .u-section-1 {
   background: linear-gradient(135deg, #1a2e22 0%, #243d2c 50%, #1e3528 100%) !important;
