@@ -2744,8 +2744,9 @@ html {
 .project-front-btn {
   font-size: 0.78em;
   font-weight: 700;
-  color: #7A9E87;
-  border: 1.5px solid #7A9E87;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
   border-radius: 20px;
   padding: 5px 14px;
   text-decoration: none;
@@ -2754,8 +2755,8 @@ html {
 }
 
 .project-front-btn:hover {
-  background: #7A9E87;
-  color: #fff;
+  background: #fff;
+  color: #5C8A6F;
 }
 
 .hover-hint {
@@ -3399,5 +3400,61 @@ header, section, footer {
   .bring-grid {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
+  }
+}
+
+/* Hero on phones: let the section size to its content instead of fixed heights */
+@media (max-width: 767px) {
+  .u-section-1 {
+    min-height: 0 !important;
+    padding: 20px 0 50px;
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    width: auto;
+    margin: 0 16px;
+  }
+
+  .u-section-1 .u-layout-cell-1,
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 0;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding: 10px 0 0;
+  }
+
+  .u-section-1 .u-image-1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-container-layout-1 {
+    padding: 20px 0 10px;
+    text-align: center;
+  }
+
+  .u-section-1 .u-container-layout-1 > * {
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .u-section-1 .u-social-icons-1 {
+    width: 200px !important;
+    height: 95px;
+    margin-top: 30px !important;
+    justify-content: center;
+  }
+
+  .u-section-1 .u-image-1 {
+    display: block;
+    width: min(295px, 100%);
+    height: auto;
+    aspect-ratio: 295 / 356;
+    object-fit: cover;
   }
 }
